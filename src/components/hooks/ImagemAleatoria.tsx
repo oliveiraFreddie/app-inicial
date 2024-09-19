@@ -3,19 +3,13 @@ import { useState } from 'react'
 
 export default function ImagemAleatoria() {
 
-    // Inicializa o estado com uma URL inicial da API picsum.photos
     const [size, setSize] = useState<number>(250)
     const [url, setUrl] = useState<string>(`https://picsum.photos/${size}/${size}`)
 
-    // Função para atualizar a URL com uma nova imagem aleatória
     function pesquisarImagem() {
-        // Atualiza o estado com uma nova URL aleatória
         setUrl(`https://picsum.photos/${size}/${size}?random=${Math.random()}`)
     }
 
-
-
-    // Renderiza o botão que busca uma nova imagem
     function renderizarBotao() {
         return (
             <button className={`
