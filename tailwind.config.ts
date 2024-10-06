@@ -6,8 +6,17 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  safelist: [
+    {
+      pattern: /^grid-cols-/,
+      variants: ['sm', 'md', 'lg', 'xl', '2xl'],
+    }
+  ],
   theme: {
     extend: {
+      screens: {
+        'xsm': '470px',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
