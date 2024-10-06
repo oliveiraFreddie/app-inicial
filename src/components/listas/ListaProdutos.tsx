@@ -8,7 +8,7 @@ interface ListaDeProdutosProps {
 
 export default function ListaDeProdutos(props: ListaDeProdutosProps) {
     return (
-        <div className="flex flex-wrap gap-5">
+        <div className="flex justify-center flex-wrap gap-5">
             {props.produtos.map((produto => {
                 return <ProdutoItem key={produto.id} produto={produto} comprar={props.comprar} />
             }))}
